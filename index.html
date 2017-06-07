@@ -9,7 +9,7 @@
 </head>
 <body ng-app="storyApp">
     <div ng-controller="storyAppController">
-        <header></header>
+        <header>Hacker News 10</header>
         <main class="flex-parent">
             <div class = "story-item" ng-repeat="storyItem in storyData track by $index">
                 
@@ -21,7 +21,6 @@
                 <div>Author Karma: {{storyItem.authorKarma}} </div>
             </div>
         </main>
-        <footer class="flex-parent"></footer>
     </div>
 </body>
 </html>
