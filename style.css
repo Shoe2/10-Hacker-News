@@ -20,7 +20,6 @@ footer {
 .story-item {
     border: 1px solid black; 
     text-overflow: wrap;
-    width: 20vw;
     padding: 5px;
 
 }
@@ -29,4 +28,7 @@ footer {
     font-weight: bold;
     font-size: 1.2rem;
     font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
+    width: 20vw;
+    text-overflow: wrap;
+
 }
