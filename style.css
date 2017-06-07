@@ -1,6 +1,11 @@
 header {
     height: 10vh;
-    background:linear-gradient(0deg, blue, white);
+    background:linear-gradient(90deg, #0000ff , #dcdcdc);
+    font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 3rem;
+
 }
 
 main {
@@ -18,7 +23,7 @@ footer {
 }
 
 .story-item {
-    border: 1px solid black; 
+    border: 1px solid #000; 
     text-overflow: wrap;
     padding: 5px;
 
