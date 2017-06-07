@@ -6,11 +6,21 @@ app.controller('storyAppController', ['$scope', '$http', function ($scope, $http
             $scope.data = response.data;
             $scope.stories = [];
             $scope.storyData = [];
+            var random = [];
             
             for (var i=0; i <= 9; i++)
             {
-                var random = Math.floor(Math.random() * ($scope.data.length - 1));
-                $scope.stories[i] = $scope.data[random];
+                random[i] = Math.floor(Math.random() * ($scope.data.length - 1));
+                if (noDupes(random, random[i]))
+                {
+                    console.log(random[i]);
+                    $scope.stories[i] = $scope.data[random[i]];
+                }
+                else 
+                {
+                    console.log("dupe");
+                }
+                
             }
 
             PopulateStories($scope.stories);
@@ -39,7 +49,18 @@ app.controller('storyAppController', ['$scope', '$http', function ($scope, $http
             });
         }
 
-
+        function noDupes (random, current)
+        {
+            var notADupe = true;
+            for (i=0; i<random.length-1; i++)
+            {
+                if (random[i] === current)
+                {
+                    notADupe = false;
+                }
+            }
+            return notADupe;
+        }
 
         var errorCallback = function (response) 
         { 

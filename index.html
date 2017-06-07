@@ -11,10 +11,10 @@
     <div ng-controller="storyAppController">
         <header></header>
         <main class="flex-parent">
-            <div class = "flex-item story-item" ng-repeat="storyItem in storyData">
+            <div class = "story-item" ng-repeat="storyItem in storyData track by $index">
                 
                 <div>{{storyItem.title}}</div>
-                <div>{{storyItem.url}}</div>
+                <div><a href="{{storyItem.url}}">Read Article</a></div>
                 <div>{{storyItem.time}}</div>
                 <div>{{storyItem.score}}</div>
                 <div>{{storyItem.by}}</div>
