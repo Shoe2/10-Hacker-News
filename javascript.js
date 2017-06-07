@@ -38,21 +38,14 @@ app.controller('storyAppController', ['$scope', '$http', function ($scope, $http
                         $scope.storyData[key] = response.data;
 
                         $http.get('https://hacker-news.firebaseio.com/v0/user/' + $scope.storyData[key].by + '.json').
-                    then(function (response){
-                        $scope.storyData[key].authorKarma = response.data.karma;
-                        console.log($scope.storyData[key].authorKarma);
-                    }, errorCallback);
+                            then(function (response){
+                                $scope.storyData[key].authorKarma = response.data.karma;
+                            }, errorCallback);
 
                     }, errorCallback);
 
             });
 
-
-            // angular.forEach($scope.storyData, function (storyData, key){
-            //     console.log(storyData);
-                
-
-            //  });
         }
 
         function noDupes (random, current)
