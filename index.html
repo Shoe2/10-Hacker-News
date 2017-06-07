@@ -7,11 +7,19 @@
     <meta charset="utf-8" />
     <title>10 Hacker News!</title>
 </head>
-<body ng-app="StoryApp">
+<body ng-app="storyApp">
     <div ng-controller="storyAppController">
         <header></header>
         <main class="flex-parent">
-            <div class = "flex-item story-item" ng-repeat="story in stories"></div>
+            <div class = "flex-item story-item" ng-repeat="storyItem in storyData">
+                
+                <div>{{storyItem.title}}</div>
+                <div>{{storyItem.url}}</div>
+                <div>{{storyItem.time}}</div>
+                <div>{{storyItem.score}}</div>
+                <div>{{storyItem.by}}</div>
+                <div>Author karma score.</div>
+            </div>
         </main>
         <footer class="flex-parent"></footer>
     </div>
