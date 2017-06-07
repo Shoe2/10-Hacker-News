@@ -1,0 +1,18 @@
+header {
+    height: 10vh;
+    background:linear-gradient(0deg, blue, white);
+}
+
+main {
+    height: 85vh;
+}
+
+footer {
+    height: 2vh;
+}
+
+.flex-parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

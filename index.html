@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="javascript.js"></script>
+    <link href="style.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title>10 Hacker News!</title>
+</head>
+<body ng-app="StoryApp">
+    <div ng-controller="storyAppController">
+        <header></header>
+        <main class="flex-parent">
+            <div class = "flex-item story-item" ng-repeat="story in stories"></div>
+        </main>
+        <footer class="flex-parent"></footer>
+    </div>
+</body>
+</html>
