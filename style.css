@@ -16,3 +16,9 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.story-item {
+    border: 1px solid black; 
+    text-overflow: wrap;
+    width: 20vw;
+}
