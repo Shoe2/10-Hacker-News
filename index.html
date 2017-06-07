@@ -13,12 +13,12 @@
         <main class="flex-parent">
             <div class = "story-item" ng-repeat="storyItem in storyData track by $index">
                 
-                <div>{{storyItem.title}}</div>
+                <div id="story-title">{{storyItem.title}}</div>
                 <div><a href="{{storyItem.url}}">Read Article</a></div>
-                <div>{{storyItem.time}}</div>
-                <div>{{storyItem.score}}</div>
-                <div>{{storyItem.by}}</div>
-                <div>Author karma score.</div>
+                <div>{{storyItem.time | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+                <div>Story Score: {{storyItem.score}}</div>
+                <div>by {{storyItem.by}}</div>
+                <div>Author Karma </div>
             </div>
         </main>
         <footer class="flex-parent"></footer>

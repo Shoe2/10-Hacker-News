@@ -13,12 +13,11 @@ app.controller('storyAppController', ['$scope', '$http', function ($scope, $http
                 random[i] = Math.floor(Math.random() * ($scope.data.length - 1));
                 if (noDupes(random, random[i]))
                 {
-                    console.log(random[i]);
                     $scope.stories[i] = $scope.data[random[i]];
                 }
                 else 
                 {
-                    console.log("dupe");
+                    i--;
                 }
                 
             }

@@ -21,4 +21,12 @@ footer {
     border: 1px solid black; 
     text-overflow: wrap;
     width: 20vw;
+    padding: 5px;
+
+}
+
+#story-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
 }
